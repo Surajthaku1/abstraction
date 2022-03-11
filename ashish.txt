@@ -1,0 +1,74 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp7
+{
+    abstract class persan
+    {
+        public string name;
+        public int age;
+        public string phone;
+        public abstract void detailp();
+    }
+    class student: persan
+    {
+        public int rollno;
+        
+        public int fees;
+        public override void detailp()
+        {
+            Console.WriteLine("studen name is : "+this.name);
+            Console.WriteLine("studen age is : "+this.age);
+            Console.WriteLine("studen phone is : "+ this.phone);
+            Console.WriteLine("studen rollno is : "+ this.rollno);
+            Console.WriteLine("studen fess is : "+ this.fees);
+        }
+    }
+    class techer:persan
+    {
+        public int salary;
+        public string subject;
+        public override void detailp()
+        {
+            Console.WriteLine("techer name is : "+ this.name);
+            Console.WriteLine("techer age is : "+this.age);
+            Console.WriteLine("techer phone is : "+ this.phone);
+            Console.WriteLine("techer subject is : "+ this.subject);
+            Console.WriteLine("techer salary is : "+this.salary);
+
+
+        }
+        
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            student b = new student();
+            
+            b.name = "naman deewaker";
+            b.age = 21;
+            b.phone = "9879375287";
+            b.rollno = 201;
+            b.fees = 2100;
+            b.detailp();
+
+            Console.WriteLine("----------aaaaa-----------");
+
+
+            techer a = new techer();
+            a.name = "mukesh kumar";
+            a.age = 45;
+            a.phone = "9760922803";
+            a.subject = "computer siencce";
+            a.salary = 21000;
+            a.detailp();
+            Console.ReadLine();
+
+
+        }
+    }
+}
